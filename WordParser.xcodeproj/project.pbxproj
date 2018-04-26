@@ -13,6 +13,8 @@
 		494CDD802091618D00FEE857 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 494CDD7F2091618D00FEE857 /* Assets.xcassets */; };
 		494CDD832091618D00FEE857 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 494CDD812091618D00FEE857 /* LaunchScreen.storyboard */; };
 		494CDD8E2091618E00FEE857 /* WordParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CDD8D2091618E00FEE857 /* WordParserTests.swift */; };
+		494CDD992091629900FEE857 /* ParserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CDD982091629900FEE857 /* ParserManager.swift */; };
+		494CDD9B2091630400FEE857 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494CDD9A2091630400FEE857 /* Helpers.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,8 @@
 		494CDD892091618E00FEE857 /* WordParserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordParserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		494CDD8D2091618E00FEE857 /* WordParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordParserTests.swift; sourceTree = "<group>"; };
 		494CDD8F2091618E00FEE857 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		494CDD982091629900FEE857 /* ParserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParserManager.swift; sourceTree = "<group>"; };
+		494CDD9A2091630400FEE857 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,9 +83,9 @@
 			children = (
 				494CDD782091618D00FEE857 /* AppDelegate.swift */,
 				494CDD7A2091618D00FEE857 /* ViewController.swift */,
+				494CDD982091629900FEE857 /* ParserManager.swift */,
 				494CDD7C2091618D00FEE857 /* Main.storyboard */,
-				494CDD7F2091618D00FEE857 /* Assets.xcassets */,
-				494CDD812091618D00FEE857 /* LaunchScreen.storyboard */,
+				494CDD9C2091678200FEE857 /* Other */,
 				494CDD842091618D00FEE857 /* Info.plist */,
 			);
 			path = WordParser;
@@ -94,6 +98,16 @@
 				494CDD8F2091618E00FEE857 /* Info.plist */,
 			);
 			path = WordParserTests;
+			sourceTree = "<group>";
+		};
+		494CDD9C2091678200FEE857 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				494CDD7F2091618D00FEE857 /* Assets.xcassets */,
+				494CDD812091618D00FEE857 /* LaunchScreen.storyboard */,
+				494CDD9A2091630400FEE857 /* Helpers.swift */,
+			);
+			path = Other;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,7 +214,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				494CDD7B2091618D00FEE857 /* ViewController.swift in Sources */,
+				494CDD992091629900FEE857 /* ParserManager.swift in Sources */,
 				494CDD792091618D00FEE857 /* AppDelegate.swift in Sources */,
+				494CDD9B2091630400FEE857 /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

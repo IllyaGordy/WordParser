@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var inputField: UITextField!
+    @IBOutlet weak var outputLabel: UILabel!
+    
+    lazy var parseManager:ParserManager = {
+        let wordList = ["apple", "pie", "shoe", "second", "secondary"]
+        return ParserManager.init(wordList: wordList)
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
 
+    @IBAction func parseButton(_ sender: UIButton) {
+    
+        guard let fieldValue = inputField.text else { return }
+        
+        let splitString = parseManager.parse(input: fieldValue)
+        
+        var outputString = ""
+        for word in splitString {
+            outputString = "\(outputString) \(word)"
+        }
+        
+        outputLabel.text = outputString
+    }
+    
 }
 

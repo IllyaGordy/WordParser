@@ -11,9 +11,13 @@ import XCTest
 
 class WordParserTests: XCTestCase {
     
+    var parseManager:ParserManager!
+    
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+
+        let wordList = ["apple", "pie", "shoe", "second", "secondary"]
+        parseManager = ParserManager.init(wordList: wordList)
     }
     
     override func tearDown() {
@@ -21,16 +25,41 @@ class WordParserTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testParserBasic() {
+        
+        let correctAnswer = ["apple", "pie", "shoe"]
+        let parsedAnwer = parseManager.parse(input: "applepieshoe")
+        
+        XCTAssert(correctAnswer == parsedAnwer)
+        
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testParserLongString() {
+        
+        let correctAnswer = ["apple", "pie", "shoe", "apple"]
+        let parsedAnwer = parseManager.parse(input: "applepieshoeasdvljaosfnvpibafvsfapple")
+        
+        XCTAssert(correctAnswer == parsedAnwer)
+        
     }
+    
+    func testParserDoubleValue() {
+        
+        let correctAnswer = ["second", "secondary"]
+        let parsedAnwer = parseManager.parse(input: "secondary")
+        
+        XCTAssert(correctAnswer == parsedAnwer)
+        
+    }
+    
+    func testParserWrongValue() {
+        
+        let correctAnswer = ["second", "secondary", "other"]
+        let parsedAnwer = parseManager.parse(input: "secondary")
+        
+        XCTAssert(correctAnswer != parsedAnwer)
+        
+    }
+    
     
 }
